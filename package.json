@@ -1,4 +1,15 @@
 {
     "name": "consoleswag",
-    "version": "1.0.0"
-    }
+    "version": "1.0.0",
+    "description": "Console messages, with swag.",
+    "license": "MIT",
+    "repository": "DillonBaird/consoleswag",
+    "main": "index.js",
+    "keywords": [
+        "console",
+        "swag",
+        "consoleswag",
+        "console message",
+        "console style"
+    ]
+}
