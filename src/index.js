@@ -7,7 +7,7 @@ export function basic(message) {
         "font-size: 60px",
         "font-family: monospace",
     ].join(";");
-    console.log("%c   " + message + "   ", t);
+    console.info("%c   " + message + "   ", t);
 }
 
 export function imgBanner(imgSrc, message) {
@@ -22,7 +22,7 @@ export function imgBanner(imgSrc, message) {
         "font-size: 60px",
         "font-family: monospace",
     ].join(";");
-    console.log("%c   " + message + "   ", t);
+    console.info("%c   " + message + "   ", t);
 }
 
 export function styleAll(options) {
