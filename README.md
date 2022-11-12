@@ -34,5 +34,6 @@ let cswagOptions = {
   fontFamily: "arial",
 };
 cswag.styleAll(cswagOptions);
+console.log("some console log message");
 //=> All console.log messages styled with options
 ```
