@@ -15,7 +15,6 @@ $ npm install consoleswag
 
 ## Message Types
 
-
 ## Usage
 
 ```js
@@ -24,5 +23,16 @@ const cswag = require("consoleswag");
 cswag.basic("So much swag!");
 //=> Basic default styling
 
-cswag.imgBanner("img path","So much swag!");
+cswag.imgBanner("img path", "So much swag!");
 //=> Image Banner
+
+let cswagOptions = {
+  bgColor: "blue",
+  padding: "20px",
+  lineHeight: "100px",
+  fontSize: "30px",
+  fontFamily: "arial",
+};
+cswag.styleAll(cswagOptions);
+//=> All console.log messages styled with options
+```

@@ -24,3 +24,16 @@ export function imgBanner(imgSrc, message) {
     ].join(";");
     console.log("%c   " + message + "   ", t);
 }
+
+export function styleAll(options) {
+    console.log = function (...args) {
+        var t = [
+            (options.bgColor ? "background-color: " + options.bgColor : "background-color: red"),
+            (options.padding ? "padding: " + options.padding : "padding: 10px 20px"),
+            (options.lineHeight ? "line-height: " + options.lineHeight : "line-height: 120px"),
+            (options.fontSize ? "font-size: " + options.fontSize : "font-size: 20px"),
+            (options.fontFamily ? "font-family: " + options.fontFamily : "font-family: monospace")
+        ].join(";")
+        console.info("%c" + args, t)
+    };
+}
