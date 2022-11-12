@@ -1,0 +1,6 @@
+# node_modules are ignored by npm by default
+# so we don't explicitly need to specify
+# more on https://docs.npmjs.com/cli/v8/using-npm/developers#keeping-files-out-of-your-package
+
+src/
+.babelrc

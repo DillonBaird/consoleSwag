@@ -4,12 +4,20 @@
     "description": "Console messages, with swag.",
     "license": "MIT",
     "repository": "DillonBaird/consoleswag",
-    "main": "index.js",
+    "main": "lib/index.js",
+    "scripts": {
+        "build": "babel src -d lib"
+    },
     "keywords": [
         "console",
         "swag",
         "consoleswag",
         "console message",
         "console style"
-    ]
+    ],
+    "devDependencies": {
+        "@babel/cli": "^7.19.3",
+        "@babel/core": "^7.20.2",
+        "@babel/preset-env": "^7.20.2"
+    }
 }
