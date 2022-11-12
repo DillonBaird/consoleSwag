@@ -23,7 +23,7 @@ const cswag = require("consoleswag");
 cswag.basic("So much swag!");
 //=> Basic default styling
 
-cswag.imgBanner("img path", "So much swag!");
+cswag.imgBanner("https://picsum.photos/200/600", "So Much Swag!");
 //=> Image Banner
 
 let cswagOptions = {
