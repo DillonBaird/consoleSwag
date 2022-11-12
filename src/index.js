@@ -2,9 +2,7 @@ export function basic(message) {
     var t = [
         "padding: 10px 20px",
         "line-height: 120px",
-        "width : 70px",
-        "height : 70px",
-        "font-size: 60px",
+        "font-size: 20px",
         "font-family: monospace",
     ].join(";");
     console.info("%c   " + message + "   ", t);
@@ -17,9 +15,7 @@ export function imgBanner(imgSrc, message) {
         "color: #fff",
         "padding: 10px 20px",
         "line-height: 120px",
-        "width : 70px",
-        "height : 70px",
-        "font-size: 60px",
+        "font-size: 50px",
         "font-family: monospace",
     ].join(";");
     console.info("%c   " + message + "   ", t);
