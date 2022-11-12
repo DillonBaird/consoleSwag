@@ -38,10 +38,10 @@ export function styleAll(options) {
         }
         else {
             var t = [
-                "background-color: #fff",
+                "background-color: red",
                 "padding: 10px 20px",
                 "line-height: 120px",
-                "font-size: 60px",
+                "font-size: 20px",
                 "font-family: monospace",
             ].join(";");
         }
