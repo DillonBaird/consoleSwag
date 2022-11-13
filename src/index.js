@@ -46,7 +46,7 @@ export function styleAll(options) {
     };
 }
 
-export function emojify() {
+export function emojify(options) {
     console.log = function (...args) {
         var t = [
           "color: gray;"
