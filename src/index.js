@@ -45,3 +45,35 @@ export function styleAll(options) {
         console.info("%c" + args, t)
     };
 }
+
+export function emojify() {
+    console.log = function (...args) {
+        var t = [
+          "color: gray;"
+        ].join(";");
+        
+        console.debug("%c" + "🧐 Log: " + args, t)
+      };
+      console.error = function (...args) {
+        var t = [
+          "color: red;"
+        ].join(";");
+        
+        console.debug("%c" + "🤬 Error: " + args, t)
+      };
+      console.warn = function (...args) {
+        var t = [
+          "color: orange;",
+          "font-weight: bold;"
+        ].join(";");
+        
+        console.debug("%c" + "🙄 Warning: " + args, t)
+      };
+      console.info = function (...args) {
+        var t = [
+          "color: lightblue;"
+        ].join(";");
+        
+        console.debug("%c" + "💁‍♂️ Info: " + args, t)
+      };
+}

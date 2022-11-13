@@ -13,18 +13,29 @@ Tired of those boring and basic console messages? Ever wanted to express your cr
 $ npm install consoleswag
 ```
 
-## Message Types
 
-## Usage
+## Usage: Basic
 
 ```js
 const cswag = require("consoleswag");
 
 cswag.basic("So much swag!");
 //=> Basic default styling
+```
+
+## Usage: Image Banner
+
+```js
+const cswag = require("consoleswag");
 
 cswag.imgBanner("https://picsum.photos/200/600", "So Much Swag!");
 //=> Image Banner
+```
+
+## Usage: Style All Console Messages
+
+```js
+const cswag = require("consoleswag");
 
 let cswagOptions = {
   bgColor: "blue",
@@ -34,6 +45,28 @@ let cswagOptions = {
   fontFamily: "arial",
 };
 cswag.styleAll(cswagOptions);
+
 console.log("some console log message");
 //=> All console.log messages styled with options
+```
+
+## Usage: Emojify
+
+```js
+const cswag = require("consoleswag");
+
+cswag.emojify();
+//=> All console messages styled with emojis
+
+console.log("some console log message");
+//=>  🧐 Log Message: some console log message
+
+console.info("some console info message");
+//=>  💁‍♂️ Info: some console info message
+
+console.warn("some console warn message");
+//=>  🙄 Warning: some console warn message
+
+console.error("some console error message");
+//=>  🤬 Error: some console error message
 ```
