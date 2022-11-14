@@ -5,6 +5,7 @@
     "license": "MIT",
     "repository": "DillonBaird/consoleswag",
     "main": "lib/index.js",
+    "type":"module",
     "scripts": {
         "build": "babel src -d lib"
     },
