@@ -5,7 +5,13 @@
     "license": "MIT",
     "repository": "DillonBaird/consoleswag",
     "main": "lib/index.js",
-    "type": "module",
+    "module": "index.js",
+    "exports": {
+        ".": {
+            "import": "./lib/index.js",
+            "require": "./index.js"
+        }
+    },
     "scripts": {
         "build": "babel src -d lib"
     },
