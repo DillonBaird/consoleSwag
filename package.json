@@ -1,17 +1,11 @@
 {
     "name": "consoleswag",
-    "version": "5.0.0",
+    "version": "4.0.0",
     "description": "Console messages, with swag.",
     "license": "MIT",
     "repository": "DillonBaird/consoleswag",
     "main": "lib/index.js",
-    "module": "index.js",
-    "exports": {
-        ".": {
-            "import": "./lib/index.js",
-            "require": "./index.js"
-        }
-    },
+    "type": "module",
     "scripts": {
         "build": "babel src -d lib"
     },

@@ -5,7 +5,7 @@ export function basic(message) {
         "font-size: 20px",
         "font-family: monospace",
     ].join(";");
-    console.info(`%c   ${message}   `, t);
+    console.debug(`%c   ${message}   `, t);
 }
 
 export function imgBanner(imgSrc, message) {
@@ -18,7 +18,7 @@ export function imgBanner(imgSrc, message) {
         "font-size: 50px",
         "font-family: monospace",
     ].join(";");
-    console.info(`%c   ${message}   `, t);
+    console.debug(`%c   ${message}   `, t);
 }
 
 export function styleAll(options) {
@@ -42,7 +42,7 @@ export function styleAll(options) {
             ].join(";");
         }
 
-        console.info(`%c${args}`, t)
+        console.debug(`%c${args}`, t)
     };
 }
 
