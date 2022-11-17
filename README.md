@@ -10,7 +10,7 @@
   <a href="https://www.npmjs.com/package/consoleswag"><img src="https://img.shields.io/badge/license-MIT-green" alt="npm bundle size (minified)"></a>
 </p><br/><br/>
 
-<p align="center"><img src="./assets/inuse.gif" width="100%"/><img src="./assets/dropShadow.png" width="100%"/></p><br/>
+<p align="center"><img src="./assets/inuse.gif" width="100%"/><img src="./assets/dropShadow.png" width="100%"/></p>
 
 ## 🙉 What's this all about?
 
@@ -91,6 +91,16 @@ console.warn("some console warn message");    //=>  🙄 Warning: some console w
 console.error("some console error message");  //=>  🤬 Error: some console error message
 ```
 <img src="./assets/emoji.png" alt="Basic Style" width="100%"/>
+<br/>
+
+### 😎 MEMEify
+
+```js
+cswag.memeify();                              //=> All console errors followed with memes
+
+console.error("some console error message");  //=>  some console error message + meme on next line
+```
+<img src="./assets/memeify.png" alt="Basic Style" width="100%"/>
 <br/>
 
 <br/><br/><br/>
