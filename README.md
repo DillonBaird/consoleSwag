@@ -1,4 +1,4 @@
-<p align="center"><a href="https://github.com/dillonbaird/consoleswag#nastyox"><img src="./logo.png" alt="consoleSwag Logo" height=100"/></a></p>
+<p align="center"><a href="https://github.com/dillonbaird/consoleswag#nastyox"><img src="./assets/logo.png" alt="consoleSwag Logo" height=100"/></a></p>
 <h1 align="center">consoleSwag.js</h1>
 <p align="center">Console messages, with swag.</p>
 
@@ -10,7 +10,7 @@
   <a href="https://www.npmjs.com/package/consoleswag"><img src="https://img.shields.io/badge/license-MIT-green" alt="npm bundle size (minified)"></a>
 </p><br/><br/>
 
-<p align="center"><img src="./examples/inuse.gif" width="100%"/><img src="./dropShadow.png" width="100%"/></p><br/>
+<p align="center"><img src="./assets/inuse.gif" width="100%"/><img src="./assets/dropShadow.png" width="100%"/></p><br/>
 
 ## 🙉 What's this all about?
 
@@ -51,7 +51,7 @@ import cswag from 'consoleswag';
 ```js
 cswag.basic("So much swag!"); //=> Basic default styling
 ```
-<img src="./examples/basic.png" alt="Basic Style" width="100%"/>
+<img src="./assets/basic.png" alt="Basic Style" width="100%"/>
 <br/>
 
 ### 🌆 Image Banner
@@ -59,7 +59,7 @@ cswag.basic("So much swag!"); //=> Basic default styling
 ```js
 cswag.imgBanner("https://picsum.photos/200/600", "So Much Swag!");  //=> Image Banner
 ```
-<img src="./examples/image.png" alt="Basic Style" width="100%"/>
+<img src="./assets/image.png" alt="Basic Style" width="100%"/>
 <br/>
 
 ### 🎨 Style All Console Messages
@@ -77,7 +77,7 @@ cswag.styleAll(cswagOptions);
 console.log("some console log message");
 //=> All console.log messages styled with options
 ```
-<img src="./examples/styleAll.png" alt="Basic Style" width="100%"/>
+<img src="./assets/styleAll.png" alt="Basic Style" width="100%"/>
 <br/>
 
 ### 🤪 Emojify
@@ -90,7 +90,7 @@ console.info("some console info message");    //=>  💁‍♂️ Info: some con
 console.warn("some console warn message");    //=>  🙄 Warning: some console warn message
 console.error("some console error message");  //=>  🤬 Error: some console error message
 ```
-<img src="./examples/emoji.png" alt="Basic Style" width="100%"/>
+<img src="./assets/emoji.png" alt="Basic Style" width="100%"/>
 <br/>
 
 <br/><br/><br/>
@@ -100,6 +100,6 @@ console.error("some console error message");  //=>  🤬 Error: some console err
 [![Stargazers repo roster for @dillonbaird/consoleswag](https://reporoster.com/stars/dillonbaird/consoleswag)](https://github.com/dillonbaird/consoleswag/stargazers)
 [![Forkers repo roster for @dillonbaird/consoleswag](https://reporoster.com/forks/dillonbaird/consoleswag)](https://github.com/dillonbaird/consoleswag/network/members)
 
-<p align="center"><img src="./barsSmallTransparentBackground.gif" alt="Animated footer bars" width="100%"/></p>
+<p align="center"><img src="./assets/barsSmallTransparentBackground.gif" alt="Animated footer bars" width="100%"/></p>
 <br/>
-<p align="center"><a href="https://github.com/dillonbaird/consoleswag#"><img src="./backToTopButtonTransparentBackground.png" alt="Back to top" height="29"/></a></p>
+<p align="center"><a href="https://github.com/dillonbaird/consoleswag#"><img src="./assets/backToTopButtonTransparentBackground.png" alt="Back to top" height="29"/></a></p>
