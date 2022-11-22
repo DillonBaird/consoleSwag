@@ -25,7 +25,7 @@ Tired of those boring and basic console messages? Ever wanted to express your cr
 
 **Step 1:** Paste the following script tag into the head of your HTML document:<br/>
 
-```JavaScript
+```Html
 <script src="https://cdn.jsdelivr.net/npm/consoleswag/lib/cjs/index.min.js"></script>
 <script type="text/javascript">
   console.swag({
@@ -54,7 +54,7 @@ cswag.swag({
 ```
 **Step 2:** Use any of the commands explained at below however you like. <br/><br/>
 ## Options
-```
+```JSON
 {
 	theme: "blackandwhite",   //default, blackandwhite, neon
 	customStyles: {
