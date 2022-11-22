@@ -26,7 +26,7 @@ Tired of those boring and basic console messages? Ever wanted to express your cr
 **Step 1:** Paste the following script tag into the head of your HTML document:<br/>
 
 ```JavaScript
-<script src="https://cdn.jsdelivr.net/npm/consoleswag/dist/lib/cjs/index.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/consoleswag/lib/cjs/index.min.js"></script>
 <script type="text/javascript">
   console.swag({
     //options
