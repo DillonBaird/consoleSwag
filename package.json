@@ -1,24 +1,57 @@
 {
-    "name": "consoleswag",
-    "version": "4.0.4",
-    "description": "Console messages, with swag.",
-    "license": "MIT",
-    "repository": "DillonBaird/consoleswag",
-    "main": "lib/index.js",
-    "type": "module",
-    "scripts": {
-        "build": "babel src -d lib"
-    },
-    "keywords": [
-        "console",
-        "swag",
-        "consoleswag",
-        "console message",
-        "console style"
-    ],
-    "devDependencies": {
-        "@babel/cli": "^7.19.3",
-        "@babel/core": "^7.20.2",
-        "@babel/preset-env": "^7.20.2"
-    }
+  "name": "consoleswag",
+  "description": "A set of JavaScript utils",
+  "scripts": {
+    "compile": "npm run lint && rm -rf dist/lib && auto-changelog && npm run copy-and-rename && tsc && tsc --build tsconfig.es5.json && npm run buildCommonJS",
+    "lint": "eslint . --ext .ts",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls",
+    "npm-pkg-json-rename": "node -e \"require('fs').rename('dist/npm-package.json', 'dist/package.json', function(err) { if (err) console.log(err); console.log('File successfully renamed!') })\"",
+    "npm-pkg-json-copy": "cpy 'npm-package.json' 'dist/' && cpy 'LICENSE' 'dist/' && cpy 'CHANGELOG.md' 'dist/' && cpy 'README.md' 'dist/'",
+    "copy-and-rename": "npm run npm-pkg-json-copy && npm run npm-pkg-json-rename",
+    "cjs-babel-gen": "npx babel dist/lib/es6/index.js -d dist/lib/cjs/",
+    "cjs-replace-var-swag": "replace-in-files --string='var swag = ' --replacement='console.swag = ' dist/lib/cjs/index.js",
+    "cjs-replace-export-swag": "replace-in-files --string='export default swag;' --replacement='' dist/lib/cjs/index.js",
+    "cjs-strip-export": "replace-in-files --string='export var' --replacement='var' dist/lib/cjs/index.js",
+    "cjs-polyfill": "replace-in-files --string='_polyfillcswag' --replacement='cswag' dist/lib/cjs/index.js",
+    "cjs-uglify": "uglifyjs dist/lib/cjs/index.js -o dist/lib/cjs/index.min.js -c -m",
+    "buildCommonJS": "npm run cjs-babel-gen && npm run cjs-replace-var-swag && npm run cjs-replace-export-swag && npm run cjs-strip-export && npm run cjs-polyfill && npm run cjs-uglify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dillonbaird/consoleswag.git"
+  },
+  "keywords": [
+    "consoleswag",
+    "console swag",
+    "swag"
+  ],
+  "author": "Dillon M. Baird",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dillonbaird/consoleswag/issues"
+  },
+  "homepage": "https://github.com/dillonbaird/consoleswag#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.20.2",
+    "@babel/plugin-transform-modules-commonjs": "^7.19.6",
+    "@babel/preset-env": "^7.20.2",
+    "@types/jest": "^26.0.19",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "@typescript-eslint/parser": "^5.43.0",
+    "auto-changelog": "^2.4.0",
+    "coveralls": "^3.1.0",
+    "cpy-cli": "^4.2.0",
+    "ejs": "^3.1.5",
+    "eslint": "^7.17.0",
+    "jest": "^26.6.3",
+    "js-htmlencode": "^0.3.0",
+    "jsdoc-parse-plus": "^1.3.0",
+    "nyc": "^15.1.0",
+    "replace-in-files-cli": "^2.0.0",
+    "typescript": "^4.1.3",
+    "uglify-js": "^3.17.4"
+  }
 }

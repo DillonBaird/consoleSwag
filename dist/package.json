@@ -1,0 +1,36 @@
+{
+  "name": "consoleswag",
+  "version": "5.0.0",
+  "description": "Console messages, with swag.",
+  "main": "lib/es5/index.js",
+  "module": "lib/es6/index.js",
+  "browser": "lib/cjs/index.min.js",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dillonbaird/consoleswag.git"
+  },
+  "files": [
+    "lib",
+    "CHANGELOG.md",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
+  "keywords": [
+        "console",
+        "swag",
+        "consoleswag",
+        "console message",
+        "console style",
+        "console swag",
+        "console css",
+        "console log"
+    ],
+  "author": "Dillon M. Baird",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dillonbaird/consoleswag/issues"
+  },
+  "homepage": "https://github.com/dillonbaird/consoleswag#readme"
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ConsoleSwag.js - Demo</title>
+    <script src="../dist/lib/cjs/index.min.js"></script>
+    <script type="text/javascript">
+        console.swag({
+            fileStackApiKey: "ABoPIfgBDQH65c619xKfiz",
+            emoji: true,
+            angryErrors: true
+        });
+    </script>
+</head>
+<style type="text/css">
+    * {
+        font-family: monospace;
+        text-align: center;
+    }
+    body {
+        padding: 20px;
+        padding-top: 10vh;
+    }
+    h1 {
+        font-size: 4rem;
+    }
+    button {
+        padding: 10px;
+        margin: 5px 3px;
+    }
+</style>
+
+<body>
+<h1>consoleSwag.js Demo</h1>
+<h3>[ Open your browser console to see it in action! ]</h3><br><br><br>
+
+
+
+    <script type="text/javascript">
+        function demoDefault() {
+            console.unswag();
+            console.swag({
+                fileStackApiKey: "ABoPIfgBDQH65c619xKfiz"
+            });
+            testAll()
+        }
+        function demoBlackAndWhite() {
+            console.unswag();
+            console.swag({
+                theme: "blackandwhite",
+                fileStackApiKey: "ABoPIfgBDQH65c619xKfiz"
+            });
+            testAll()
+        }
+        function demoWithEmoji() {
+            console.unswag();
+            console.swag({
+                emoji: true,
+                fileStackApiKey: "ABoPIfgBDQH65c619xKfiz"
+            });
+            testAll()
+        }
+        function demoWithAngryError() {
+            console.unswag();
+            console.swag({
+                angryErrors: true,
+                fileStackApiKey: "ABoPIfgBDQH65c619xKfiz"
+            });
+            testAll()
+        }
+        function demoWithAngryErrorCurse() {
+            console.unswag();
+            console.swag({
+                angryErrors: true,
+                uncensorAngryErrors: true,
+                fileStackApiKey: "ABoPIfgBDQH65c619xKfiz"
+            });
+            testAll()
+        }
+        function demoWithErrorMeme() {
+            console.unswag();
+            console.swag({
+                memeErrors: true,
+                fileStackApiKey: "ABoPIfgBDQH65c619xKfiz"
+            });
+            testAll();
+        }
+
+        function testAll() {
+            console.clear();
+            console.log("This is a log", [1,2,3,4]);
+            console.warn("This is a warn", [1,2,3,4]);
+            console.info("This is a info", [1,2,3,4]);
+            console.error("This is a error", [1,2,3,4]);
+        }
+        
+        testAll();
+        console.gradient("Welcome to consoleSwag Demo! 🎉")
+        console.ascii("welcome!")
+    </script>
+
+    <h4>Options</h4>
+    <button onclick='demoDefault()' title='console.swag()'>Default</button>
+    <button onclick='demoBlackAndWhite()' title='console.swag({ theme: "blackandwhite" })'>Black & White</button>
+    <button onclick='demoWithEmoji()' title='console.swag({ emoji: true })'>With Emoji</button>
+    <button onclick='demoWithAngryError()' title='console.swag({ angryErrors: true })'>Angry Errors</button>
+    <button onclick='demoWithAngryErrorCurse()' title='console.swag({ angryErrors: true, uncensoredAngryErrors: true })'>Angry Errors [NSFW]</button>
+    <button onclick='demoWithErrorMeme()' title='console.swag({ memeErrors: true })'>Error Memes</button>
+
+
+    <br><br><br><br>   
+
+    <h4>Normal Console Functions</h4>
+    <button onclick='console.log("This is a log", [1,2,3,4])' title='console.log("This is a log", [1,2,3,4])'>console.log()</button>
+    <button onclick='console.warn("This is a warn", [1, 2, 3, 4])' title='console.warn("This is a warn", [1, 2, 3, 4])'>console.warn()</button>
+    <button onclick='console.info("This is a info", [1, 2, 3, 4])' title='console.info("This is a info", [1, 2, 3, 4])'>console.info()</button>
+    <button onclick='console.error("This is a error", [1, 2, 3, 4])' title='console.error("This is a error", [1, 2, 3, 4])'>console.error()</button>
+
+    <br><br><br>
+
+    <h4>New Console Functions</h4>
+    <button onclick='console.gradient("This is a gradient")' title='console.gradient("This is a gradient")'>console.gradient()</button>
+    <button onclick='console.ascii("This is ascii text")' title='console.ascii("This is a ascii text")'>console.ascii()</button>
+    <button onclick='console.image("https://defaced.dev/tools/consoleimg/rick.gif")' title='console.image("https://defaced.dev/tools/consoleimg/rick.gif")'>console.image()</button>
+    <!--  TODO: Move assets to local folder for hosting  -->
+    <button onclick='console.imageBanner("https://picsum.photos/300/100","I am an awesome Image Banner!")' title='console.imageBanner("https://picsum.photos/300/100","I am an awesome Image Banner!")'>console.imageBanner()</button>
+    <button onclick='console.asciiImage("https://www.kindpng.com/picc/m/78-787331_social-javascript-logo-png-js-negro-transparent-png.png")' title='console.asciiImage("https://www.kindpng.com/picc/m/78-787331_social-javascript-logo-png-js-negro-transparent-png.png")'>console.asciiImage()</button>
+    <button onclick='console.link("We are hiring!\nCheck out ","http://SomeCoolLink.org", " to learn more.")' title='console.link("We are hiring!\nCheck out ","http://SomeCoolLink.org", " to learn more.")'>console.link()</button>
+    <button onclick='console.bigText("This is a bigText")' title='console.bigText("This is a bigText")'>console.bigText()</button>
+    <button onclick='console.style("This is a style","color: red; font-size: 20px;")' title='console.style("This is a style","color: red; font-size: 20px;")'>console.style()</button>
+    <button onclick='console.screenshot("https://www.npmjs.com/package/consoleswag")' title='console.screenshot("https://www.npmjs.com/package/consoleswag")'>console.screenshot()</button>
+</body>
+
+</html>

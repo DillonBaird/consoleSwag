@@ -3,4 +3,4 @@
 # more on https://docs.npmjs.com/cli/v8/using-npm/developers#keeping-files-out-of-your-package
 
 src/
-.babelrc
+npm-package.json
