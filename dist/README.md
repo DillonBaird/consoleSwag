@@ -26,7 +26,7 @@ Tired of those boring and basic console messages? Ever wanted to express your cr
 **Step 1:** Paste the following script tag into the head of your HTML document:<br/>
 
 ```JavaScript
-<script src="https://cdn.jsdelivr.net/npm/consoleswag/lib/cjs/index.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/consoleswag/dist/lib/cjs/index.min.js"></script>
 <script type="text/javascript">
   console.swag({
     //options
@@ -81,6 +81,7 @@ cswag.swag({
 	angryErrors: true,
 	uncensorAngryErrors: true,
 	customAngryText: ["wtf","really???"],
+	fileStackApiKey: "xxxxx",		//required for console.asciiImage() & console.screenshot()
 }
 
 ```
@@ -92,7 +93,7 @@ cswag.swag({
 ### ⌶ Basic (Big Text)
 
 ```js
-cswag.basic("So much swag!"); //=> Basic default styling
+console.bigText("So much swag!"); //=> Basic default styling
 ```
 
 <img src="./assets/basic.png" alt="Basic Style" width="100%"/>
@@ -101,13 +102,13 @@ cswag.basic("So much swag!"); //=> Basic default styling
 ### 🌆 Image Banner
 
 ```js
-cswag.imgBanner("https://picsum.photos/200/600", "So Much Swag!"); //=> Image Banner
+console.imageBanner("https://picsum.photos/200/600", "So Much Swag!"); //=> Image Banner
 ```
 
 <img src="./assets/image.png" alt="Basic Style" width="100%"/>
 <br/>
 
-### 🎨 Style All Console Messages
+<!-- ### 🎨 Style All Console Messages
 
 ```js
 const cswagOptions = {
@@ -151,7 +152,7 @@ console.error("some console error message"); //=>  some console error message + 
 <img src="./assets/memeify.png" alt="Basic Style" width="100%"/>
 <br/>
 
-<br/><br/><br/>
+<br/><br/><br/> -->
 
 ## 👏 Supporters
 
