@@ -58,7 +58,7 @@ type themeObject = {
 	error: styleArray;
 };
 
-export const swag = (options: optionObject) => {
+export function swag(options: optionObject) {
 	const censorFilter = (word: string | unknown[]) => {
 		word = options?.uncensorAngryErrors ? word : "*".repeat(word.length);
 		return word;
@@ -173,7 +173,7 @@ export const swag = (options: optionObject) => {
 	if (options?.theme) {
 		// eslint-disable-next-line no-prototype-builtins
 		if (!defaultOptions.themes.hasOwnProperty(options.theme)) {
-			window.console.error("ConsoleSwag - Error: Invalid Theme Option");
+			console.error("ConsoleSwag - Error: Invalid Theme Option");
 			return;
 		}
 	}
@@ -995,12 +995,12 @@ export const swag = (options: optionObject) => {
 	};
 
 	//rename existing console methods
-	const _log = window.console.log;
-	const _warn = window.console.warn;
-	const _info = window.console.info;
-	const _error = window.console.error;
+	const _log = console.log;
+	const _warn = console.warn;
+	const _info = console.info;
+	const _error = console.error;
 
-	window.console.log = (() =>
+	console.log = (() =>
 		Function.prototype.bind.call(
 			_log,
 			console,
@@ -1008,7 +1008,7 @@ export const swag = (options: optionObject) => {
 			genTagStyle("log")
 		))();
 
-	window.console.warn = (() =>
+	console.warn = (() =>
 		Function.prototype.bind.call(
 			_warn,
 			console,
@@ -1016,7 +1016,7 @@ export const swag = (options: optionObject) => {
 			genTagStyle("warn")
 		))();
 
-	window.console.info = (() =>
+	console.info = (() =>
 		Function.prototype.bind.call(
 			_info,
 			console,
@@ -1024,7 +1024,7 @@ export const swag = (options: optionObject) => {
 			genTagStyle("info")
 		))();
 
-	window.console.error = (() => {
+	console.error = (() => {
 		const tagText: string = options?.memeErrors
 			? " "
 			: options?.angryErrors
@@ -1038,7 +1038,7 @@ export const swag = (options: optionObject) => {
 		);
 	})();
 
-	window.console.image = (url: string) => {
+	console.image = (url: string) => {
 		const newImg = new Image();
 		newImg.id = "consoleImage";
 		newImg.onload = () => {
@@ -1058,7 +1058,7 @@ export const swag = (options: optionObject) => {
 		newImg.src = url;
 	};
 
-	window.console.imageBanner = (url: string, message: string) => {
+	console.imageBanner = (url: string, message: string) => {
 		const newImg = new Image();
 		newImg.id = "consoleImage";
 		newImg.onload = () => {
@@ -1086,15 +1086,15 @@ export const swag = (options: optionObject) => {
 		newImg.src = url;
 	};
 
-	window.console.ascii = (message: string) => {
+	console.ascii = (message: string) => {
 		const asciiLogStyle: styleString = ["font-family: monospace"].join(";");
 		_log(`%c${buildASCIIstyle2(message.toLowerCase())}\r\n\n`, asciiLogStyle);
 	};
 
 	//TODO: ASCII Image
-	window.console.asciiImage = (url: string, size: string) => {
+	console.asciiImage = (url: string, size: string) => {
 		if (!options?.fileStackApiKey) {
-			window.console.error(
+			console.error(
 				"FileStackApiKey Missing from ConsoleSwag options. Sign up for a free key here: https://dev.filestack.com/signup/free/ "
 			);
 			return;
@@ -1120,12 +1120,12 @@ export const swag = (options: optionObject) => {
 			});
 	};
 
-	window.console.screenshot = (url: string) => {
+	console.screenshot = (url: string) => {
 		const screenshotURL = url ? url : window.location.href;
 		const resultImg = `https://cdn.filestackcontent.com/${options?.fileStackApiKey}/urlscreenshot/${screenshotURL}`;
 
 		if (!options?.fileStackApiKey) {
-			window.console.error(
+			console.error(
 				"FileStackApiKey Missing from ConsoleSwag options. Sign up for a free key here: https://dev.filestack.com/signup/free/ "
 			);
 			return;
@@ -1150,7 +1150,7 @@ export const swag = (options: optionObject) => {
 	};
 
 	//TODO: needs a new name better than link
-	window.console.link = (pretext: string, url: string, posttext: string) => {
+	console.link = (pretext: string, url: string, posttext: string) => {
 		const linkStyle: styleString = [
 			"color: orange",
 			"font-weight: bold",
@@ -1166,7 +1166,7 @@ export const swag = (options: optionObject) => {
 		//use: https://javascript.plainenglish.io/step-up-your-console-logs-with-these-tricks-41e90368fe5f
 	};
 
-	window.console.gradient = (message: string, theme: string) => {
+	console.gradient = (message: string, theme: string) => {
 		let color1: string, color2: string, textColor: string;
 		switch (theme) {
 			case "greenblue":
@@ -1230,7 +1230,7 @@ export const swag = (options: optionObject) => {
 		//use: https://javascript.plainenglish.io/step-up-your-console-logs-with-these-tricks-41e90368fe5f
 	};
 
-	window.console.bigText = (message: string) => {
+	console.bigText = (message: string) => {
 		const bigLogStyle: styleString = [
 			"padding: 10px 20px",
 			"line-height: 120px",
@@ -1240,54 +1240,54 @@ export const swag = (options: optionObject) => {
 		_log(`%c${message}`, bigLogStyle);
 	};
 
-	window.console.style = (message: string, style: styleString) => {
+	console.style = (message: string, style: styleString) => {
 		const bigLogStyle: styleString = style
 			? style
 			: ["font-family: arial"].join(";");
 		_log(`%c${message}`, bigLogStyle);
 	};
 
-	window.console.unswag = () => {
-		window.console.log = _log;
-		window.console.warn = _warn;
-		window.console.info = _info;
-		window.console.error = _error;
-		window.console.image = _log;
-		window.console.imageBanner = _log;
-		window.console.ascii = _log;
-		window.console.asciiImage = _log;
-		window.console.link = _log;
-		window.console.gradient = _log;
-		window.console.bigText = _log;
-		window.console.style = _log;
-		window.console.screenshot = _log;
+	console.unswag = () => {
+		console.log = _log;
+		console.warn = _warn;
+		console.info = _info;
+		console.error = _error;
+		console.image = _log;
+		console.imageBanner = _log;
+		console.ascii = _log;
+		console.asciiImage = _log;
+		console.link = _log;
+		console.gradient = _log;
+		console.bigText = _log;
+		console.style = _log;
+		console.screenshot = _log;
 	};
-};
+}
 
 //Polyfills from previous versions
 export const _polyfillcswag = {
 	basic: (message: string) => {
-		window.console.bigText(message); //TODO
+		console.bigText(message); //TODO
 	},
 	imgBanner: (image: string, message: string) => {
-		window.console.imageBanner(image, message);
+		console.imageBanner(image, message);
 	},
 	styleAll: () => {
-		window.console.link(
+		console.link(
 			"cswag.styleAll() has been deprecated; please see docs to find an equivalent: ",
 			"https://github.com/dillonbaird/consoleswag#readme",
 			""
 		);
 	},
 	emojify: () => {
-		window.console.link(
+		console.link(
 			"cswag.emojify() has been deprecated; please see docs to find an equivalent: ",
 			"https://github.com/dillonbaird/consoleswag#readme",
 			""
 		);
 	},
 	memeify: () => {
-		window.console.link(
+		console.link(
 			"cswag.memeify() has been deprecated; please see docs to find an equivalent: ",
 			"https://github.com/dillonbaird/consoleswag#readme",
 			""

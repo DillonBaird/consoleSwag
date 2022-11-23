@@ -11,7 +11,7 @@
     "npm-pkg-json-copy": "cpy 'npm-package.json' 'dist/' && cpy 'LICENSE' 'dist/' && cpy 'CHANGELOG.md' 'dist/' && cpy 'README.md' 'dist/'",
     "copy-and-rename": "npm run npm-pkg-json-copy && npm run npm-pkg-json-rename",
     "cjs-babel-gen": "npx babel dist/lib/es6/index.js -d dist/lib/cjs/",
-    "cjs-replace-var-swag": "replace-in-files --string='var swag = ' --replacement='console.swag = ' dist/lib/cjs/index.js",
+    "cjs-replace-var-swag": "replace-in-files --string='function swag(' --replacement='console.swag = function swag(' dist/lib/cjs/index.js",
     "cjs-replace-export-swag": "replace-in-files --string='export default swag;' --replacement='' dist/lib/cjs/index.js",
     "cjs-strip-export": "replace-in-files --string='export' --replacement='' dist/lib/cjs/index.js",
     "cjs-polyfill": "replace-in-files --string='_polyfillcswag' --replacement='cswag' dist/lib/cjs/index.js",
