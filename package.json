@@ -13,7 +13,7 @@
     "cjs-babel-gen": "npx babel dist/lib/es6/index.js -d dist/lib/cjs/",
     "cjs-replace-var-swag": "replace-in-files --string='var swag = ' --replacement='console.swag = ' dist/lib/cjs/index.js",
     "cjs-replace-export-swag": "replace-in-files --string='export default swag;' --replacement='' dist/lib/cjs/index.js",
-    "cjs-strip-export": "replace-in-files --string='export var' --replacement='var' dist/lib/cjs/index.js",
+    "cjs-strip-export": "replace-in-files --string='export' --replacement='' dist/lib/cjs/index.js",
     "cjs-polyfill": "replace-in-files --string='_polyfillcswag' --replacement='cswag' dist/lib/cjs/index.js",
     "cjs-uglify": "uglifyjs dist/lib/cjs/index.js -o dist/lib/cjs/index.min.js -c -m",
     "buildCommonJS": "npm run cjs-babel-gen && npm run cjs-replace-var-swag && npm run cjs-replace-export-swag && npm run cjs-strip-export && npm run cjs-polyfill && npm run cjs-uglify"

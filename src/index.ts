@@ -58,7 +58,7 @@ type themeObject = {
 	error: styleArray;
 };
 
-const swag = (options: optionObject) => {
+export const swag = (options: optionObject) => {
 	const censorFilter = (word: string | unknown[]) => {
 		word = options?.uncensorAngryErrors ? word : "*".repeat(word.length);
 		return word;
@@ -1294,5 +1294,3 @@ export const _polyfillcswag = {
 		);
 	},
 };
-
-export default swag;

@@ -1,6 +1,6 @@
 {
   "name": "consoleswag",
-  "version": "5.0.4",
+  "version": "5.0.5",
   "description": "Console messages, with swag.",
   "main": "lib/es5/index.js",
   "module": "lib/es6/index.js",
